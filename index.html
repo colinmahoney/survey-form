@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="./css/survey-form.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Security Question Research Survey</h1>
+    </header>
+    <form id="survey-form">
+      <p class="full-width" id="description">Please answer all questions as
+          truthfully as possible. All answers will be used solely for 
+          research purposes.</p>
+      <label class="col-1" for="name" id="name-label">Name:</label> 
+      <input class="col-2" type="text" id="name" name="name"
+          placeholder="First Last">
+      <label class="col-1" for="email" id="email-label">Email:</label>
+      <input class="col-2" type="email" id="email" name="email"
+          placeholder="foo@bar.com">
+      <label class="col-1" for="number" id="number-label">SSN:</label>
+      <input class="col-2" type="number" id="number" name="ssn" 
+          min="001000000" max="899999999" placeholder="1112223333">
+      <label class="col-1" for="dropdown" id="dropdown-label">
+          What was the make of your first car?</label>
+      <select class="col-2" id="dropdown" name="firstcar"> 
+        <option value="audi">Audi</option>
+        <option value="chevrolet">Chevrolet</option>
+        <option value="dodge">Dodge</option>
+        <option value="ford">Ford</option>
+        <option value="jeep">Jeep</option>
+        <option value="lexus">Lexus</option>
+        <option value="lincoln">Lincoln</option>
+        <option value="mazda">Mazda</option>
+        <option value="nissan">Nissan</option>
+        <option value="scion">Scion</option>
+        <option value="suzuki">Suzuki</option>
+        <option value="tesla">Tesla</option>
+        <option value="toyota">Toyota</option>
+      </select>
+      <fieldset class="full-width">
+        <legend>Choose an item</legend>
+        <input type="radio" id="one" name="items" value="one" checked>
+        <label for="one">One</label> 
+        <br>
+        <input type="radio" id="two" name="items" value="two">
+        <label for="two">Two</label> 
+        <br>
+        <input type="radio" id="three" name="items" value="three">
+        <label for="three">Three</label> 
+        <br>
+        <input type="radio" id="four" name="items" value="four">
+        <label for="four">Four</label> 
+      </fieldset>
+    </form>
+  </body>
+</html>
