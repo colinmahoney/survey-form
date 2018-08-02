@@ -5,28 +5,32 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="./css/survey-form.css">
+    <!-- test script
+    <script 
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script>
+    -->
     <title>Survey Form</title>
   </head>
   <body>
     <header>
-      <h1 id="title">Security Question Research Survey</h1>
+      <h1 id="title">Survey Form Template</h1>
     </header>
     <form id="survey-form">
-      <p class="full-width" id="description">Please answer all questions as
-          truthfully as possible. All answers will be used solely for 
-          research purposes.</p>
+      <p class="full-width" id="description">This template survey form 
+          contains many of the different form input types.</p>
       <label class="col-1" for="name" id="name-label">Name:</label> 
       <input class="col-2" type="text" id="name" name="name"
-          placeholder="First Last">
+          placeholder="Name" required>
       <label class="col-1" for="email" id="email-label">Email:</label>
       <input class="col-2" type="email" id="email" name="email"
-          placeholder="foo@bar.com">
-      <label class="col-1" for="number" id="number-label">SSN:</label>
-      <input class="col-2" type="number" id="number" name="ssn" 
-          min="001000000" max="899999999" placeholder="1112223333">
+          placeholder="foo@bar.com" required>
+      <label class="col-1" for="number" id="number-label">Number (1-10):</label>
+      <input class="col-2" type="number" id="number" name="number" 
+          min="1" max="10" placeholder="1-10" required>
       <label class="col-1" for="dropdown" id="dropdown-label">
-          What was the make of your first car?</label>
-      <select class="col-2" id="dropdown" name="firstcar"> 
+          Dropdown</label>
+      <select class="col-2" id="dropdown" name="automanufacturers"> 
         <option value="audi">Audi</option>
         <option value="chevrolet">Chevrolet</option>
         <option value="dodge">Dodge</option>
@@ -41,8 +45,9 @@
         <option value="tesla">Tesla</option>
         <option value="toyota">Toyota</option>
       </select>
-      <fieldset class="full-width">
-        <legend>Choose an item</legend>
+      <p class="col-1">Radio Buttons:</p>
+      <fieldset class="col-2">
+        <legend>Choose a number</legend>
         <input type="radio" id="one" name="items" value="one" checked>
         <label for="one">One</label> 
         <br>
@@ -55,6 +60,32 @@
         <input type="radio" id="four" name="items" value="four">
         <label for="four">Four</label> 
       </fieldset>
+      <p class="col-1">Checkboxes:</p>
+      <fieldset class="col-2">
+        <legend>Choose a color</legend>
+        <input type="checkbox" name="colors" value="blue">
+        <label for="blue">Blue</label> 
+        <br>
+        <input type="checkbox" name="colors" value="green">
+        <label for="green">Green</label> 
+        <br>
+        <input type="checkbox" name="colors" value="orange">
+        <label for="orange">Orange</label> 
+        <br>
+        <input type="checkbox" name="colors" value="brown">
+        <label for="brown">Brown</label> 
+      </fieldset>
+      <label class="col-1" for="comments" id="textarea-label">
+          Additional Comments:</label>
+      <textarea class="col-2" name="comments" rows="10" cols="40" 
+          placeholder="Enter any additional comments here."></textarea>
+      <button class="full-width" id="submit" type="submit" form="survey-form" 
+          value="Submit">Submit</button>
     </form>
+    <footer>
+      <p>This form created as a solution to the 'Responsive Web Design 
+          Projects - Build a Survey Form' task on 
+          <a href="https://www.freecodecamp.org">freecodecamp.org</a></p>
+    </footer>
   </body>
 </html>
